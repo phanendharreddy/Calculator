@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch dbDemo",
+            "request": "launch",
+            "mainClass": "dbDemo",
+            "projectName": "fullStackCalculator_483587ad"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -1,15 +1,7 @@
 import java.util.Scanner;
 import java.sql.*;
 public class calculator {
-
-
-    public static void main(String[] args) throws Exception {
-        String url = "";
-        String uname = "phanendhar";
-        String pwd = "";
-        
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection(url, uname,pwd);
+public static void main(String[] args) throws Exception {
         Scanner kb = new Scanner(System.in);
 
         System.out.println("\nSimple Calculator");
