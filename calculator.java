@@ -1,12 +1,18 @@
 import java.util.Scanner;
+import java.sql.*;
 public class calculator {
 
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+        String url = "";
+        String uname = "phanendhar";
+        String pwd = "";
+        
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname,pwd);
         Scanner kb = new Scanner(System.in);
 
-        System.out.println("Simple Calculator");
+        System.out.println("\nSimple Calculator");
 
         System.out.println("\nHere are your options:");
         System.out.println("\n1. Addition");
