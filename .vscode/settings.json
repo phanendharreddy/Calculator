@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        ""
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Phanendhar Reddy\\Downloads\\mysql-connector-java-8.0.30.jar"
+    ],
+    "java.dependency.packagePresentation": "hierarchical"
+}
