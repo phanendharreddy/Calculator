@@ -1,2 +1,2 @@
-# fullStackCalculator
-Building a Full Stack Calculator here
+# Calculator
+Built a calculator using HTML, CSS and Javascript.

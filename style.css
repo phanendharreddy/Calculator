@@ -1,0 +1,209 @@
+html {
+    /* footer fix */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(255, 245, 240);
+    user-select: none;
+}
+
+.container {
+    transform: scale(0.85);
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: 650px;
+    border: rgb(182, 150, 139) 6px solid;
+    border-radius: 35px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 10px 80px -15px rgba(0, 0, 0, 1);
+}
+
+.screen {
+    padding-right: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 350px;
+    height: 130px;
+    background-image: linear-gradient(to right, rgb(255, 201, 147), rgb(255, 180, 147));
+    color: white;
+    font-size: 50px;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden
+}
+
+.result {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    padding: 5px;
+    width: 350px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 140, 91);
+    font-size: 37px;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden
+}
+
+.buttons {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 14px;
+    gap: 10px;
+    color: rgb(120, 91, 83);
+}
+
+.buttons>div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    font-size: 35px;
+    border-radius: 50%;
+}
+
+.operator {
+    background-color: rgb(255, 226, 210);
+}
+
+.buttons>div:hover {
+    background-color: rgb(253, 222, 210);
+}
+
+.buttons>div:active {
+    background-color: rgb(253, 222, 210);
+    transform: scale(0.9);
+}
+
+.buttons>div.operator:hover {
+    background-color: rgb(255, 181, 154);
+}
+
+.buttons>div.operator:active {
+    background-color: rgb(255, 181, 154);
+}
+
+/* Dark mode */
+.bodyDark {
+    background-color: rgb(139, 169, 147);
+}
+
+.calculatorDark {
+    border: rgb(33, 38, 51) 6px solid;
+    background-color: rgb(46, 57, 81);
+    box-shadow: 0 10px 80px -15px rgba(0, 0, 0, 1);
+}
+
+.screenDark {
+    background-image: linear-gradient(rgb(36, 38, 42), rgb(36, 43, 59));
+    color: rgb(4, 226, 115);
+}
+
+.resultDark {
+    background-color: rgb(46, 57, 81);
+    color: rgb(4, 226, 115);
+}
+
+.buttonsDark {
+    color: rgb(13, 179, 135);
+}
+
+.operatorDark {
+    background-color: rgb(33, 43, 65);
+}
+
+.buttonsDark>div:hover {
+    background-color: rgb(63, 78, 110);
+}
+
+.buttonsDark>div:active {
+    background-color: rgb(63, 78, 110);
+}
+
+.buttonsDark>div.operator:hover {
+    background-color: rgb(63, 78, 110);
+}
+
+.buttonsDark>div.operator:active {
+    background-color: rgb(63, 78, 110);
+}
+
+.toggle {
+    margin-top: 10px;
+    --width: 60px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height)/2);
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background-color: #dddd;
+    transition: background 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill {
+    background: #009578;
+}
+
+.toggle__fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill::after {
+    transform: translateX(var(--height))
+}
+
+.footer {
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer>p {
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
